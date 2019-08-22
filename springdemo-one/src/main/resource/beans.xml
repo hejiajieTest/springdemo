@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+  
+    <bean id="springHelloWorld"
+        class="cn.ffcs.msa.springdemo.one.SpringHelloWorld" />
+    <bean id="strutsHelloWorld"
+        class="cn.ffcs.msa.springdemo.one.StrutsHelloWorld" />
+  
+<!--     <bean id="helloWorldService"
+        class="cn.ffcs.msa.springdemo.one.service.HelloWorldService">
+        <property name="helloWorld" ref="springHelloWorld"/>
+    </bean> -->
+     <bean id="helloWorldService"
+        class="cn.ffcs.msa.springdemo.one.service.HelloWorldService">
+        <property name="helloWorld" ref="strutsHelloWorld"/>
+    </bean>
+</beans>
